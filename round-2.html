@@ -5,67 +5,83 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Jeopardy</title>
+  <link href="style-sheets/round-2.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
   <header>
-  <h1>Second Round</h1>
+   <h1>Round Two</h1>
   <nav>
-    <ul>
-      <li>Landing Page</li>
-      <li>Second Round</li>
-      <li>Final Jeopardy</li>
+    <ul class="nav-bar">
+      <li><a id="to-landing" href="#">Landing Page</a></li>
+      <li><a id="to-round-one" href="#">Round One</a></li>
+      <li><a id="to-final-jeopardy" href="#">Final Jeopardy</a></li>
     </ul>
   </nav>
 </header>
-<main id="jeopardy-Grid">
-  <section id="column-first"></section>
-    <ul id="category-one">
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-    </ul>
-  <section id="column-second"></section>
-  <ul id="category-two">
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-  </ul>
-  <section id="column-third"></section>
-  <ul id="category-three">
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-  </ul>
-  <seciont id="column-fourth"></seciont>
-  <ul id="category-four">
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-  </ul>
-  <section id="column-fifth"></section>
-  <ul id="category-five">
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-  </ul>
-  <section id="column-sixth"></section>
-  <ul id="category-six">
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-  </ul>
+<main id="jeopardy-grid">
+  <div class="topic one">Nature</div>
+  <div class="topic two">Animals</div>
+  <div class="topic three">Computers</div>
+  <div class="topic four">Mythology</div>
+  <div class="topic five">History</div>
+  <div class="topic six">General</div>
+  <div id="nature" class="one-hundred amount">100</div>
+  <div id="animals" class="one-hundred amount">100</div>
+  <div id="computers" class="one-hundred amount">100</div>
+  <div id="mythology" class="one-hundred amount">100</div>
+  <div id="history" class="one-hundred amount">100</div>
+  <div id="general" class="one-hundred amount">100</div>
+  <div id="nature" class="two-hundred amount">200</div>
+  <div id="animals" class="two-hundred amount">200</div>
+  <div id="computers" class="two-hundred amount">200</div>
+  <div id="mythology" class="two-hundred amount">200</div>
+  <div id="history" class="two-hundred amount">200</div>
+  <div id="general" class="two-hundred amount">200</div>
+  <div id="nature" class="three-hundred amount">300</div>
+  <div id="animals" class="three-hundred amount">300</div>
+  <div id="computers" class="three-hundred amount">300</div>
+  <div id="mythology" class="three-hundred amount">300</div>
+  <div id="histroy" class="three-hundred amount">300</div>
+  <div id="general" class="three-hundred amount">300</div>
+  <div id="nature" class="four-hundred amount">400</div>
+  <div id="animals" class="four-hundred amount">400</div>
+  <div id="computers" class="four-hundred amount">400</div>
+  <div id="mythology" class="four-hundred amount">400</div>
+  <div id="history" class="four-hundred amount">400</div>
+  <div id="general" class="four-hundred amount">400</div>
+  <div id="nature" class="five-hundred amount">500</div>
+  <div id="animals" class="five-hundred amount">500</div>
+  <div id="computers" class="five-hundred amount">500</div>
+  <div id="mythology" class="five-hundred amount">500</div>
+  <div id="history" class="five-hundred amount">500</div>
+  <div id="general" class="five-hundred amount">500</div>
 </main>
+<footer class="score">
+  <h2>Score</h2>
+  <ul class="players">
+    <li>Player 1: </li>
+    <li>Player 2: </li>
+    <li>Player 3: </li>
+  </ul>
+</footer>
 </body>
 </html>
+<script>
+  function toLanding() {
+    window.open('/jeopardy-landing-page.html', '_self')
+  }
+  let landingPageLink = document.getElementById("to-landing");
+  landingPageLink.addEventListener("click", toLanding)
+
+  function toRoundOne() {
+    window.open('/round-1.html', '_self')
+  }
+  let roundOneLink = document.getElementById("to-round-one");
+  roundOneLink.addEventListener("click", toRoundOne)
+
+  function toFinalJeopardy() {
+    window.open('/final-jeopardy.html', '_self')
+  }
+  let finalJeopardyLink = document.getElementById("to-final-jeopardy");
+  finalJeopardyLink.addEventListener("click", toFinalJeopardy)
+</script>

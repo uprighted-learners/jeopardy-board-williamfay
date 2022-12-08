@@ -1,0 +1,16 @@
+body {
+    text-align: center;
+}
+
+.score {
+    text-align: center;
+}
+
+.players {
+    list-style: none;
+    padding: 0%;
+}
+
+#new-content {
+    display: grid;
+}

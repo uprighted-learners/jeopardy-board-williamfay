@@ -5,67 +5,71 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Jeopardy</title>
+  <link href="style-sheets/round-1.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
   <header>
    <h1>Round One</h1>
   <nav>
-    <ul>
-      <li>Landing Page</li>
-      <li>Second Round</li>
-      <li>Final Jeopardy</li>
+    <ul class="nav-bar">
+      <li><a id="to-landing" href="#">Landing Page</a></li>
+      <li><a id="to-round-two" href="#">Round Two</a></li>
+      <li><a id="to-final-jeopardy" href="#">Final Jeopardy</a></li>
     </ul>
   </nav>
 </header>
-<main id="jeopardy-Grid">
-  <section id="column-first"></section>
-    <ul id="category-one">
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-    </ul>
-  <section id="column-second"></section>
-  <ul id="category-two">
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-  </ul>
-  <section id="column-third"></section>
-  <ul id="category-three">
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-  </ul>
-  <seciont id="column-fourth"></seciont>
-  <ul id="category-four">
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-  </ul>
-  <section id="column-fifth"></section>
-  <ul id="category-five">
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-  </ul>
-  <section id="column-sixth"></section>
-  <ul id="category-six">
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-  </ul>
+<main id="jeopardy-grid">
+    <div class="topic nature">Nature</div>
+    <div class="topic animals">Animals</div>
+    <div class="topic computers">Computers</div>
+    <div class="topic mythology">Mythology</div>
+    <div class="topic history">History</div>
+    <div class="topic general">General</div>
+    <div href="#" id="nature one-hundred question" class="amount">100</div>
+    <div href="#" id="animals one-hundred question" class="amount">100</div>
+    <div href="#" id="computers one-hundred question" class="amount">100</div>
+    <div href="#" id="mythology one-hundred question" class="amount">100</div>
+    <div href="#" id="history one-hundred question" class="amount">100</div>
+    <div href="#" id="general one-hundred question" class="amount">100</div>
+    <div href="#" id="nature two-hundred question" class="amount">200</div>
+    <div href="#" id="animals two-hundred question" class="amount">200</div>
+    <div href="#" id="computers two-hundred question" class="amount">200</div>
+    <div href="#" id="mythology two-hundred question" class="amount">200</div>
+    <div href="#" id="history two-hundred question" class="amount">200</div>
+    <div href="#" id="general two-hundred question" class="amount">200</div>
+    <div href="#" id="nature three-hundred question" class="amount">300</div>
+    <div href="#" id="animals three-hundred question" class="amount">300</div>
+    <div href="#" id="computers three-hundred question" class="amount">300</div>
+    <div href="#" id="mythology three-hundred question" class="amount">300</div>
+    <div href="#" id="history three-hundred question" class="amount">300</div>
+    <div href="#" id="general three-hundred question" class="amount">300</div>
+    <div href="#" id="nature four-hundred question" class="amount">400</div>
+    <div href="#" id="animals four-hundred question" class="amount">400</div>
+    <div href="#" id="computers four-hundred question" class="amount">400</div>
+    <div href="#" id="mythology four-hundred question" class="amount">400</div>
+    <div href="#" id="history four-hundred question" class="amount">400</div>
+    <div href="#" id="general four-hundred question" class="amount">400</div>
+    <div href="#" id="nature five-hundred question" class="amount">500</div>
+    <div href="#" id="animals five-hundred question" class="amount">500</div>
+    <div href="#" id="computers five-hundred question" class="amount">500</div>
+    <div href="#" id="mythology five-hundred question" class="amount">500</div>
+    <div href="#" id="history five-hundred question" class="amount">500</div>
+    <div href="#" id="general five-hundred question" class="amount">500</div>
 </main>
+<section id="submit">
+  <label>Type Answer Here:</label>
+  <input type="text" id="response-input" name="response">
+  <button for="response" id="respond">Submit Answer</button>
+  <button id="pass">Pass</button>
+</section>
+<footer class="score">
+  <h2>Score</h2>
+  <ul class="players">
+    <li>Player 1: </li>
+    <li>Player 2: </li>
+    <li>Player 3: </li>
+  </ul>
+</footer>
 </body>
 </html>
+<script type="module" src="/scripts/round-1.js"></script>
