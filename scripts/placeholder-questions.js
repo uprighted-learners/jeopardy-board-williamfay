@@ -147,8 +147,9 @@
                         "question": "What alcoholic drink is made from molasses?",
                         "answer": "Rum"
                     },
-                        "threeHundred": {"value": 300,
-                        "question": "What is the French word for &quot;hat&quot;?",
+                    "threeHundred": {
+                        "value": 300,
+                        "question": "What is the French word for 'hat'?",
                         "answer": "Chapeau"
                     },
                     "fourHundred": {

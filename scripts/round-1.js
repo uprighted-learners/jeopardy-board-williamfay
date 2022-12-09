@@ -1,5 +1,4 @@
 import placeholderQuestions from './placeholder-questions.js';
-console.log(placeholderQuestions[0].roundOne.nature.oneHundred.question)
 
 //Global
 const submit = document.getElementById("respond");
@@ -41,128 +40,27 @@ function deactivateButton() {
 }
   //Handle Questions
 let divs = document.getElementsByClassName("amount");
-let prop1;
-let prop2;
-let value;
+
 for (const div of divs) {
     div.addEventListener("click", event => {
-        if (div.id.includes("nature")) {
-            prop1 = placeholderQuestions[0].roundOne.nature;
-         if (div.id.includes("one-hundred")) {
-            prop2 = prop1.oneHundred.question;
-            value = prop1.oneHundred.value;
-         } else if (div.id.includes("two-hundred")) {
-            prop2 = prop1.twoHundred.question;
-            value = prop1.twoHundred.value;
-         } else if (div.id.includes("three-hundred")) {
-            prop2 = prop1.threeHundred.question;
-            value = prop1.threeHundred.value;
-        } else if (div.id.includes("four-hundred")) {
-            prop2 = prop1.fourHundred.question;
-            value = prop1.fourHundred.value;
-        } else if (div.id.includes("five-hundred")) {
-            prop2 = prop1.fiveHundred.question;
-            value = prop1.fiveHundred.value;
-        }}
-        if (div.id.includes("animals")) {
-            prop1 = placeholderQuestions[0].roundOne.animals;
-            if (div.id.includes("one-hundred")) {
-                prop2 = prop1.oneHundred.question;
-                value = prop1.oneHundred.value;
-             } else if (div.id.includes("two-hundred")) {
-                prop2 = prop1.twoHundred.question;
-                value = prop1.twoHundred.value;
-             } else if (div.id.includes("three-hundred")) {
-                prop2 = prop1.threeHundred.question;
-                value = prop1.threeHundred.value;
-            } else if (div.id.includes("four-hundred")) {
-                prop2 = prop1.fourHundred.question;
-                value = prop1.fourHundred.value;
-            } else if (div.id.includes("five-hundred")) {
-                prop2 = prop1.fiveHundred.question;
-                value = prop1.fiveHundred.value;
-        }}
-        if (div.id.includes("computers")) {
-            prop1 = placeholderQuestions[0].roundOne.computers;
-            if (div.id.includes("one-hundred")) {
-                prop2 = prop1.oneHundred.question;
-                value = prop1.oneHundred.value;
-             } else if (div.id.includes("two-hundred")) {
-                prop2 = prop1.twoHundred.question;
-                value = prop1.twoHundred.value;
-             } else if (div.id.includes("three-hundred")) {
-                prop2 = prop1.threeHundred.question;
-                value = prop1.threeHundred.value;
-            } else if (div.id.includes("four-hundred")) {
-                prop2 = prop1.fourHundred.question;
-                value = prop1.fourHundred.value;
-            } else if (div.id.includes("five-hundred")) {
-                prop2 = prop1.fiveHundred.question;
-                value = prop1.fiveHundred.value;
-        }}
-        if (div.id.includes("mythology")) {
-            prop1 = placeholderQuestions[0].roundOne.mythology;
-            if (div.id.includes("one-hundred")) {
-                prop2 = prop1.oneHundred.question;
-                value = prop1.oneHundred.value;
-             } else if (div.id.includes("two-hundred")) {
-                prop2 = prop1.twoHundred.question;
-                value = prop1.twoHundred.value;
-             } else if (div.id.includes("three-hundred")) {
-                prop2 = prop1.threeHundred.question;
-                value = prop1.threeHundred.value;
-            } else if (div.id.includes("four-hundred")) {
-                prop2 = prop1.fourHundred.question;
-                value = prop1.fourHundred.value;
-            } else if (div.id.includes("five-hundred")) {
-                prop2 = prop1.fiveHundred.question;
-                value = prop1.fiveHundred.value;
-        }}
-        if (div.id.includes("history")) {
-            prop1 = placeholderQuestions[0].roundOne.history;
-            if (div.id.includes("one-hundred")) {
-                prop2 = prop1.oneHundred.question;
-                value = prop1.oneHundred.value;
-             } else if (div.id.includes("two-hundred")) {
-                prop2 = prop1.twoHundred.question;
-                value = prop1.twoHundred.value;
-             } else if (div.id.includes("three-hundred")) {
-                prop2 = prop1.threeHundred.question;
-                value = prop1.threeHundred.value;
-            } else if (div.id.includes("four-hundred")) {
-                prop2 = prop1.fourHundred.question;
-                value = prop1.fourHundred.value;
-            } else if (div.id.includes("five-hundred")) {
-                prop2 = prop1.fiveHundred.question;
-                value = prop1.fiveHundred.value;
-        }}
-        if (div.id.includes("general")) {
-            prop1 = placeholderQuestions[0].roundOne.general;
-            if (div.id.includes("one-hundred")) {
-                prop2 = prop1.oneHundred.question;
-                value = prop1.oneHundred.value;
-             } else if (div.id.includes("two-hundred")) {
-                prop2 = prop1.twoHundred.question;
-                value = prop1.twoHundred.value;
-             } else if (div.id.includes("three-hundred")) {
-                prop2 = prop1.threeHundred.question;
-                value = prop1.threeHundred.value;
-            } else if (div.id.includes("four-hundred")) {
-                prop2 = prop1.fourHundred.question;
-                value = prop1.fourHundred.value;
-            } else if (div.id.includes("five-hundred")) {
-                prop2 = prop1.fiveHundred.question;
-                value = prop1.fiveHundred.value;
-        }}
-        div.textContent = prop2;
-        activateButton();
-})};
-console.log(prop1, prop2, value);
+            let questionCategory = event.target.id.split(' ')[0];
+            let questionValue = event.target.id.split(' ')[1];
+            div.textContent = placeholderQuestions[0].roundOne[questionCategory][questionValue].question;
+            activateButton();
+            })
+        };
+        
+submit.addEventListener("click", event => {
+    deactivateButton();
+    checkAnswer();
+    })
   //Handle Submit
-submit.addEventListener("click", () => {
+  /*
+submit.addEventListener("click", event => {
+        console.log(val);
         deactivateButton();
         checkAnswer();
-    });
+    });*/
 function checkAnswer() {
     let response = document.getElementById("response-input").value.toLowerCase();
     let answer = placeholderQuestions[0].roundOne.nature.oneHundred.answer;
@@ -171,7 +69,6 @@ function checkAnswer() {
         score = score + placeholderQuestions[0].roundOne.nature.oneHundred.value;
         console.log(score)
     }
-
 }
 
 
