@@ -70,18 +70,3 @@ function handleWagers() {
 function handleAnswers() {
     
 }
-
-
-
-
-
-/*Errors to Fix:
-_ Had to take out the nav functions for the follwoing reasons
-- When on a page, nav link JS for that page creates an 
-error because there is no link and can't go to a page 
-that is already open
-    - Something up with landing page button JS. Moved to <script>
-  on landing page html
-    - They sorta just all stopped working
-
-  */

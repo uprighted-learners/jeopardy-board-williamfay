@@ -5,8 +5,46 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Final Jeopardy</title>
+  <link href="/style-sheets/final-jeopardy.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
   <h1>Final Jeopardy</h1>
+  <h2>Category: XXX</h2>
+  <section class="wagers">
+    <div class="player-one-wrapper">
+      <label for="player-one">Player One: </label>
+      <input id="player-one" type="number" placeholder="Wager" />
+    </div>
+    <div class="player-two-wrapper">
+      <label for="player-two">Player Two: </label>
+      <input id="player-two" type="number" placeholder="Wager" />
+    </div>
+    <div class="player-three-wrapper">
+      <label for="player-three">Player Three: </label>
+      <input id="player-three" type="number" placeholder="Wager" />
+    </div>
+    <button id="play-final">Submit Wagers</button>
+  </section>
 </body>
+<section id="new-content"></section>
+<section class="score">
+  <h2>Score</h2>
+  <ul class="players">
+    <li>Player 1: </li>
+    <li>Player 2: </li>
+    <li>Player 3: </li>
+  </ul>
+</section>
+<footer>
+  <a id="to-landing" href="#">Back to Start</a>
+</footer>
 </html>
+<script type="module" src="/scripts/placeholder-questions.js"></script>
+<script type="module" src="/scripts/index.js">
+function toLanding() {
+    window.open('/jeopardy-landing-page.html', '_self')
+  }
+  let landingPageLink = document.getElementById("to-landing");
+  landingPageLink.addEventListener("click", toLanding)
+
+</script>

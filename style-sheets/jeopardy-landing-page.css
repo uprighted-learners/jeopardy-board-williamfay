@@ -1,0 +1,23 @@
+.welcome-message, footer {
+    color: rgb(0, 0, 0);
+}
+
+main {
+    display: grid;
+    justify-content: center;
+}
+.play {
+    justify-content: center;
+}
+
+body {
+    display: grid;
+    justify-content: center;
+}
+
+header, footer {
+    display: grid;
+    justify-content: center;
+}
+
+

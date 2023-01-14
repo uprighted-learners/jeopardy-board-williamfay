@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jeopardy</title>
+  <link href="style-sheets/jeopardy-landing-page.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+  <header>
+    <h1 class="welcome-message">Welcome to Jeopary!</h1>
+  </header>
+  <main>
+    <button class="play">Click Here to Play</button>
+  </main>
+  <footer>
+    <h3 class="footer-text">Three player game</h3>
+  </footer>
+</body>
+</html>
+<script>
+  function play() {
+    window.open('/round-1.html', '_self');
+  }
+let button = document.getElementsByClassName("play")[0];
+button.addEventListener("click", play);
+</script>

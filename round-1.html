@@ -5,8 +5,71 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Jeopardy</title>
+  <link href="style-sheets/round-1.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
-  <h1>Round One</h1>
+  <header>
+   <h1>Round One</h1>
+  <nav>
+    <ul class="nav-bar">
+      <li><a id="to-landing" href="#">Landing Page</a></li>
+      <li><a id="to-round-two" href="#">Round Two</a></li>
+      <li><a id="to-final-jeopardy" href="#">Final Jeopardy</a></li>
+    </ul>
+  </nav>
+</header>
+<main id="jeopardy-grid">
+    <div class="topic nature">Nature</div>
+    <div class="topic animals">Animals</div>
+    <div class="topic computers">Computers</div>
+    <div class="topic mythology">Mythology</div>
+    <div class="topic history">History</div>
+    <div class="topic general">General</div>
+    <div href="#" id="nature oneHundred question" class="amount">100</div>
+    <div href="#" id="animals oneHundred question" class="amount">100</div>
+    <div href="#" id="computers oneHundred question" class="amount">100</div>
+    <div href="#" id="mythology oneHundred question" class="amount">100</div>
+    <div href="#" id="history oneHundred question" class="amount">100</div>
+    <div href="#" id="general oneHundred question" class="amount">100</div>
+    <div href="#" id="nature twoHundred question" class="amount">200</div>
+    <div href="#" id="animals twoHundred question" class="amount">200</div>
+    <div href="#" id="computers twoHundred question" class="amount">200</div>
+    <div href="#" id="mythology twoHundred question" class="amount">200</div>
+    <div href="#" id="history twoHundred question" class="amount">200</div>
+    <div href="#" id="general twoHundred question" class="amount">200</div>
+    <div href="#" id="nature threeHundred question" class="amount">300</div>
+    <div href="#" id="animals threeHundred question" class="amount">300</div>
+    <div href="#" id="computers threeHundred question" class="amount">300</div>
+    <div href="#" id="mythology threeHundred question" class="amount">300</div>
+    <div href="#" id="history threeHundred question" class="amount">300</div>
+    <div href="#" id="general threeHundred question" class="amount">300</div>
+    <div href="#" id="nature fourHundred question" class="amount">400</div>
+    <div href="#" id="animals fourHundred question" class="amount">400</div>
+    <div href="#" id="computers fourHundred question" class="amount">400</div>
+    <div href="#" id="mythology fourHundred question" class="amount">400</div>
+    <div href="#" id="history fourHundred question" class="amount">400</div>
+    <div href="#" id="general fourHundred question" class="amount">400</div>
+    <div href="#" id="nature fiveHundred question" class="amount">500</div>
+    <div href="#" id="animals fiveHundred question" class="amount">500</div>
+    <div href="#" id="computers fiveHundred question" class="amount">500</div>
+    <div href="#" id="mythology fiveHundred question" class="amount">500</div>
+    <div href="#" id="history fiveHundred question" class="amount">500</div>
+    <div href="#" id="general fiveHundred question" class="amount">500</div>
+</main>
+<section id="submit">
+  <label>Type Answer Here:</label>
+  <input type="text" id="response-input" name="response">
+  <button for="response" id="respond">Submit Answer</button>
+  <button id="pass">Pass</button>
+</section>
+<footer class="score">
+  <h2>Score</h2>
+  <ul class="players">
+    <li>Player 1: </li>
+    <li>Player 2: </li>
+    <li>Player 3: </li>
+  </ul>
+</footer>
 </body>
 </html>
+<script type="module" src="/scripts/round-1.js"></script>

@@ -1,309 +1,607 @@
     const placeholderQuestions = [
         {
+            "roundOne": {
+                "nature": {
+                    "oneHundred": {
+                        "value": 100,
+                        "question": "The human heart has how many chambers?",
+                        "answer": "4",
+                    },
+                    "twoHundred": {
+                        "value": 200,
+                        "question": "What is the largest animal currently on Earth?",
+                        "answer": "Blue Whale"
+                    },
+                    "threeHundred": {
+                        "value": 300,
+                        "question": "What is the hottest planet in the Solar System?",
+                        "answer": "Venus"
+                    },
+                    "fourHundred": {
+                        "value": 400,
+                        "question": "What is the first element on the periodic table?",
+                        "answer": "Hydrogen"
+                    },
+                    "fiveHundred": {
+                        "value": 500,
+                        "question": "Which gas forms about 78% of the Earth's atmosphere?",
+                        "answer": "Nitrogen"
+                    },
+                },
+                "animals": {
+                    "oneHundred": {
+                        "value": 100,
+                        "question": "What is the fastest  land animal?",
+                        "answer": "Cheetah"
+                    },
+                    "twoHundred": {
+                        "value": 200,
+                        "question": "What is the scientific name for modern day humans?",
+                        "answer": "Homo Sapiens"
+                    },
+                    "threeHundred": {
+                        "value": 300,
+                        "question": "The Kakapo is a large, flightless, nocturnal parrot native to which country?",
+                        "answer": "New Zealand"
+                    },
+                    "fourHundred": { 
+                        "value": 400,
+                        "question": "What does LASER stand for?",
+                        "answer": "Light amplification by stimulated emission of radiation"
+                    },
+                    "fiveHundred": {
+                        "value": 500,
+                        "question": "What is Grumpy Cat's real name?",
+                        "answer": "Tardar Sauce"
+                    },
+                },
+                "computers": {
+                    "oneHundred": {
+                        "value": 100,
+                        "question": "What does GHz stand for?",
+                        "answer": "Gigahertz"
+                    },
+                    "twoHundred": {
+                        "value": 200,
+                        "question": "HTML is what type of language?",
+                        "answer": "Markup Language"
+                    },
+                    "threeHundred": {
+                        "value": 300,
+                        "question": "What amount of bits commonly equals one byte?",
+                        "answer": "8"
+                    },
+                    "fourHundred": {
+                        "value": 400,
+                        "question": "In computing, what does MIDI stand for?",
+                        "answer": "Musical Instrument Digital Interface"
+                    },
+                    "fiveHundred": {
+                        "value": 500,
+                        "question": "In web design, what does CSS stand for?",
+                        "answer": "Cascading Style Sheet"
+                    },
+                },
+                "mythology": {
+                    "oneHundred": {
+                        "value": 100,
+                        "question": "Who was the only god from Greece who did not get a name change in Rome?",
+                        "answer": "Apollo"
+                    },
+                    "twoHundred": {
+                        "value": 200,
+                        "question": "Who in Greek mythology, who led the Argonauts in search of the Golden Fleece?",
+                        "answer": "Jason"
+                    },
+                    "threeHundred": {
+                        "value": 300,
+                        "question": "This Greek goddess's name was chosen for the dwarf planet responsible for discord on Pluto's classification amongst astronomers.",
+                        "answer": "Eris"
+                    },
+                    "fourHundred": {
+                        "value": 400,
+                        "question": "Which Greek and Roman god was known as the god of music, truth and prophecy, healing, the sun and light, plague, poetry, and more?",
+                        "answer": "Apollo"
+                    },
+                    "fiveHundred": {
+                        "value": 500,
+                        "question": "Which figure from Greek mythology traveled to the underworld to return his wife Eurydice to the land of the living?",
+                        "answer": "Orpheus"
+                    },
+                },
+                "history": {
+                    "oneHundred": {
+                        "value": 100,
+                        "question": "How many manned moon landings have there been?",
+                        "answer": "6"
+                    },
+                    "twoHundred": {
+                        "value": 200,
+                        "question": "The original Roman alphabet lacked the following letters EXCEPT:",
+                        "answer": "X"
+                    },
+                    "threeHundred": {
+                        "value": 300,
+                        "question": "The collapse of the Soviet Union took place in which year?",
+                        "answer": "1991"
+                    },
+                    "fourHundred": {
+                        "value": 400,
+                        "question": "What was Manfred von Richthofen's nickname?",
+                        "answer": "The Red Baron"
+                    },
+                    "fiveHundred": {
+                        "value": 500,
+                        "question": "Which modern day country is the region that was known as Phrygia in ancient times?",
+                        "answer": "Turkey"
+                    },
+                },
+                "general": {
+                    "oneHundred": {
+                        "value": 100,
+                        "question": "Which company did Valve cooperate with in the creation of the Vive?",
+                        "answer": "HTC"
+                    },
+                    "twoHundred": {
+                        "value": 200,
+                        "question": "What alcoholic drink is made from molasses?",
+                        "answer": "Rum"
+                    },
+                    "threeHundred": {
+                        "value": 300,
+                        "question": "What is the French word for 'hat'?",
+                        "answer": "Chapeau"
+                    },
+                    "fourHundred": {
+                        "value": 400,
+                        "question": "Who is depicted on the US hundred dollar bill?",
+                        "answer": "Benjamin Franklin"
+                    },
+                    "fiveHundred": {
+                        "value": 500,
+                        "question": "What do the letters in the GMT time zone stand for?",
+                        "answer": "Greenwich Mean Time"
+                    }
+                }
+            }
+        }
+
+    ]
+    
+    
+  /*  
+    [
+        {
             "category": "Nature",
-            "question": "The human heart has how many chambers?",
-            "answer": "4"
+            "roundOne": {
+                "value": 100,
+                "question": "The human heart has how many chambers?",
+                "answer": "4",
+                "value": 200,
+                "question": "What is the largest animal currently on Earth?",
+                "answer": "Blue Whale"
+            }
         },
         {
             "category": "Nature",
-            "question": "What is the largest animal currently on Earth?",
-            "answer": "Blue Whale"
+            "roundOne": {
+                "value": 200,
+                "question": "What is the largest animal currently on Earth?",
+                "answer": "Blue Whale"}
         },
         {
             "category": "Nature",
-            "question": "What is the hottest planet in the Solar System?",
-            "answer": "Venus"
+            "roundOne": {
+                "value": 300,
+                "question": "What is the hottest planet in the Solar System?",
+                "answer": "Venus"}
         },
         {
             "category": "Nature",
-            "question": "What is the first element on the periodic table?",
-            "answer": "Hydrogen"
+            "roundOne": {
+                "value": 400,
+                "question": "What is the first element on the periodic table?",
+                "answer": "Hydrogen"}
         },
         {
             "category": "Nature",
-            "question": "Which gas forms about 78% of the Earth's atmosphere?",
-            "answer": "Nitrogen"
+            "roundOne": {
+                "value": 500,
+                "question": "Which gas forms about 78% of the Earth's atmosphere?",
+                "answer": "Nitrogen"}
         },
         {
             "category": "Nature",
-            "question": "Alzheimer's disease primarily affects which part of the human body?",
-            "answer": "Brain"
+            "roundTwo": {
+                "value": 100,
+                "question": "Alzheimer's disease primarily affects which part of the human body?",
+                "answer": "Brain"}
         },
         {
             "category": "Nature",
-            "question": "What was the name of the first artificial Earth satellite, launched by the Soviet Union in 1957?",
-            "answer": "Sputnik 1"
+            "roundTwo": {
+                "value": 200,
+                "question": "What was the name of the first artificial Earth satellite, launched by the Soviet Union in 1957?",
+                "answer": "Sputnik 1"}
         },
         {
             "category": "Nature",
-            "question": "The asteroid belt is located between which two planets?",
-            "answer": "Mars and Jupiter"
+            "roundTwo": {
+                "value": 300,
+                "question": "The asteroid belt is located between which two planets?",
+                "answer": "Mars and Jupiter"}
         },
         {
             "category": "Nature",
-            "question": "What does LASER stand for?",
-            "answer": "Light amplification by stimulated emission of radiation"
+            "roundTwo": {
+                "value": 400,
+                "question": "What does LASER stand for?",
+                "answer": "Light amplification by stimulated emission of radiation"}
         },
         {
             "category": "Nature",
-            "question": "Dry ice is the solid form of what substance?",
-            "answer": "Carbon dioxide"
+            "roundTwo": {
+                "value": 500,
+                "question": "Dry ice is the solid form of what substance?",
+                "answer": "Carbon dioxide"}
         },
         {
             "category": "Animals",
-            "question": "What is the fastest  land animal?",
-            "answer": "Cheetah"
+            "roundOne": {
+                "value": 100,
+                "question": "What is the fastest  land animal?",
+                "answer": "Cheetah"}
         },
         {
             "category": "Animals",
-            "question": "What is the scientific name for modern day humans?",
-            "answer": "Homo Sapiens"
+            "roundOne": {
+                "value": 200,
+                "question": "What is the scientific name for modern day humans?",
+                "answer": "Homo Sapiens"}
         },
         {
             "category": "Animals",
-            "question": "The Kakapo is a large, flightless, nocturnal parrot native to which country?",
-            "answer": "New Zealand"
+            "roundOne": {
+                "value": 300,
+                "question": "The Kakapo is a large, flightless, nocturnal parrot native to which country?",
+                "answer": "New Zealand"}
         },
         {
             "category": "Animals",
-            "question": "Hippocampus is the Latin name for which marine creature?",
-            "answer": "Seahorse"
+            "roundOne": {
+                "value": 400,
+                "question": "Hippocampus is the Latin name for which marine creature?",
+                "answer": "Seahorse"}
         },
         {
             "category": "Animals",
-            "question": "What is Grumpy Cat's real name?",
-            "answer": "Tardar Sauce"
+            "roundOne": {
+                "value": 500,
+                "question": "What is Grumpy Cat's real name?",
+                "answer": "Tardar Sauce"}
         },
         {
             "category": "Animals",
-            "question": "Which class of animals are newts members of?",
-            "answer": "Amphibian"
+            "roundTwo": {
+                "value": 100,
+                "question": "Which class of animals are newts members of?",
+                "answer": "Amphibian"}
         },
         {
             "category": "Animals",
-            "question": "What is the collective noun for a group of crows?",
-            "answer": "Murder"
+            "roundTwo": {
+                "value": 200,
+                "question": "What is the collective noun for a group of crows?",
+                "answer": "Murder"}
         },
         {
             "category": "Animals",
-            "question": "By definition, where does an abyssopelagic animal live?",
-            "answer": "Bottom of the ocean"
+            "roundTwo": {
+                "value": 300,
+                "question": "By definition, where does an abyssopelagic animal live?",
+                "answer": "Bottom of the ocean"}
         },
         {
             "category": "Animals",
-            "question": "What colour is the female blackbird?",
-            "answer": "Brown"
+            "roundTwo": {
+                "value": 400,
+                "question": "What colour is the female blackbird?",
+                "answer": "Brown"}
         },
         {
             "category": "Animals",
-            "question": "What is the name of a rabbit's house?",
-            "answer": "Burrow"
+            "roundTwo": {
+                "value": 500,
+                "question": "What is the name of a rabbit's house?",
+                "answer": "Burrow"}
         },
         {
             "category": "Computers",
-            "question": "What does GHz stand for?",
-            "answer": "Gigahertz"
+            "roundOne": {
+                "value": 100,
+                "question": "What does GHz stand for?",
+                "answer": "Gigahertz"}
         },
         {
             "category": "Computers",
-            "question": "HTML is what type of language?",
-            "answer": "Markup Language"
+            "roundOne": {
+                "value": 200,
+                "question": "HTML is what type of language?",
+                "answer": "Markup Language"}
         },
         {
             "category": "Computers",
-            "question": "What amount of bits commonly equals one byte?",
-            "answer": "8"
+            "roundOne": {
+                "value": 300,
+                "question": "What amount of bits commonly equals one byte?",
+                "answer": "8"}
         },
         {
             "category": "Computers",
-            "question": "In computing, what does MIDI stand for?",
-            "answer": "Musical Instrument Digital Interface"
+            "roundOne": {
+                "value": 400,
+                "question": "In computing, what does MIDI stand for?",
+                "answer": "Musical Instrument Digital Interface"}
         },
         {
             "category": "Computers",
-            "question": "In web design, what does CSS stand for?",
-            "answer": "Cascading Style Sheet"
+            "roundOne": {
+                "value": 500,
+                "question": "In web design, what does CSS stand for?",
+                "answer": "Cascading Style Sheet"}
         },
         {
             "category": "Computers",
-            "question": "The series of the Intel HD graphics generation succeeding that of the 5000 and 6000 series (Broadwell) is called:",
-            "answer": "HD Graphics 500"
+            "roundTwo": {
+                "value": 100,
+                "question": "The series of the Intel HD graphics generation succeeding that of the 5000 and 6000 series (Broadwell) is called:",
+                "answer": "HD Graphics 500"}
         },
         {
             "category": "Computers",
-            "question": "On Twitter, what was the original character limit for a Tweet?",
-            "answer": "140"
+            "roundTwo": {
+                "value": 200,
+                "question": "On Twitter, what was the original character limit for a Tweet?",
+                "answer": "140"}
         },
         {
             "category": "Computers",
-            "question": "In JavaScript, what is the = operator?",
-            "answer": "Assignment"
+            "roundTwo": {
+                "value": 300,
+                "question": "In JavaScript, what is the = operator?",
+                "answer": "Assignment"}
         },
         {
             "category": "Computers",
-            "question": "Which programming language shares its name with an island in Indonesia?",
-            "answer": "Java"
+            "roundTwo": {
+                "value": 400,
+                "question": "Which programming language shares its name with an island in Indonesia?",
+                "answer": "Java"}
         },
         {
             "category": "Computers",
-            "question": "In computing, what does LAN stand for?",
-            "answer": "Local Area Network"
+            "roundTwo": {
+                "value": 500,
+                "question": "In computing, what does LAN stand for?",
+                "answer": "Local Area Network"}
         },
         {
             "category": "Mythology",
-            "question": "Who was the only god from Greece who did not get a name change in Rome?",
-            "answer": "Apollo"
+            "roundOne": {
+                "value": 100,
+                "question": "Who was the only god from Greece who did not get a name change in Rome?",
+                "answer": "Apollo"}
         },
         {
             "category": "Mythology",
-            "question": "Who in Greek mythology, who led the Argonauts in search of the Golden Fleece?",
-            "answer": "Jason"
+            "roundOne": {
+                "value": 200,
+                "question": "Who in Greek mythology, who led the Argonauts in search of the Golden Fleece?",
+                "answer": "Jason"}
         },
         {
             "category": "Mythology",
-            "question": "This Greek goddess's name was chosen for the dwarf planet responsible for discord on Pluto's classification amongst astronomers.",
-            "answer": "Eris"
+            "roundOne": {
+                "value": 300,
+                "question": "This Greek goddess's name was chosen for the dwarf planet responsible for discord on Pluto's classification amongst astronomers.",
+                "answer": "Eris"}
         },
         {
             "category": "Mythology",
-            "question": "Which Greek and Roman god was known as the god of music, truth and prophecy, healing, the sun and light, plague, poetry, and more?",
-            "answer": "Apollo"
+            "roundOne": {
+                "value": 400,
+                "question": "Which Greek and Roman god was known as the god of music, truth and prophecy, healing, the sun and light, plague, poetry, and more?",
+                "answer": "Apollo"}
         },
         {
             "category": "Mythology",
-            "question": "Which figure from Greek mythology traveled to the underworld to return his wife Eurydice to the land of the living?",
-            "answer": "Orpheus"
+            "roundOne": {
+                "value": 500,
+                "question": "Which figure from Greek mythology traveled to the underworld to return his wife Eurydice to the land of the living?",
+                "answer": "Orpheus"}
         },
         {
             "category": "Mythology",
-            "question": "In most traditions, who was the wife of Zeus?",
-            "answer": "Hera"
+            "roundTwo": {
+                "value": 100,
+                "question": "In most traditions, who was the wife of Zeus?",
+                "answer": "Hera"}
         },
         {
             "category": "Mythology",
-            "question": "Which of these mythological creatures is said to be half-man and half-horse?",
-            "answer": "Centaur"
+            "roundTwo": {
+                "value": 200,
+                "question": "Which of these mythological creatures is said to be half-man and half-horse?",
+                "answer": "Centaur"}
         },
         {
             "category": "Mythology",
-            "question": "What mythology did the god Apollo come from?",
-            "answer": "Greek and Roman"
+            "roundTwo": {
+                "value": 300,
+                "question": "What mythology did the god Apollo come from?",
+                "answer": "Greek and Roman"}
         },
         {
             "category": "Mythology",
-            "question": "What mytological creatures have women's faces and vultures' bodies?",
-            "answer": "Harpies"
+            "roundTwo": {
+                "value": 400,
+                "question": "What mytological creatures have women's faces and vultures' bodies?",
+                "answer": "Harpies"}
         },
         {
             "category": "Mythology",
-            "question": "The Nike apparel and footwear brand takes it's name from the Greek goddess of what?",
-            "answer": "Victory"
+            "roundTwo": {
+                "value": 500,
+                "question": "The Nike apparel and footwear brand takes it's name from the Greek goddess of what?",
+                "answer": "Victory"}
         },
         {
             "category": "History",
+            "roundOne": {
+                "value": 100,
             "question": "How many manned moon landings have there been?",
-            "answer": "6"
+            "answer": "6"}
         },
         {
             "category": "History",
-            "question": "The original Roman alphabet lacked the following letters EXCEPT:",
-            "answer": "X"
+            "roundOne": {
+                "value": 200,
+                "question": "The original Roman alphabet lacked the following letters EXCEPT:",
+                "answer": "X"}
         },
         {
             "category": "History",
-            "question": "The collapse of the Soviet Union took place in which year?",
-            "answer": "1991"
+            "roundOne": {
+                "value": 300,
+                "question": "The collapse of the Soviet Union took place in which year?",
+                "answer": "1991"}
         },
         {
             "category": "History",
-            "question": "What was Manfred von Richthofen's nickname?",
-            "answer": "The Red Baron"
+            "roundOne": {
+                "value": 400,
+                "question": "What was Manfred von Richthofen's nickname?",
+                "answer": "The Red Baron"}
         },
         {
             "category": "History",
-            "question": "Which modern day country is the region that was known as Phrygia in ancient times?",
-            "answer": "Turkey"
+            "roundOne": {
+                "value": 500,
+                "question": "Which modern day country is the region that was known as Phrygia in ancient times?",
+                "answer": "Turkey"}
         },
         {
             "category": "History",
-            "question": "Who was the first president of the United States?",
-            "answer": "George Washington"
+            "roundTwo": {
+                "value": 100,
+                "question": "Who was the first president of the United States?",
+                "answer": "George Washington"}
         },
         {
             "category": "History",
-            "question": "What was the first sport to have been played on the moon?",
-            "answer": "Golf"
+            "roundTwo": {
+                "value": 200,
+                "question": "What was the first sport to have been played on the moon?",
+                "answer": "Golf"}
         },
         {
             "category": "History",
-            "question": "What year did World War I begin?",
-            "answer": "1914"
+            "roundTwo": {
+                "value": 300,
+                "question": "What year did World War I begin?",
+                "answer": "1914"}
         },
         {
             "category": "History",
-            "question": "How old was Adolf Hitler when he died?",
-            "answer": "56"
+            "roundTwo": {
+                "value": 400,
+                "question": "How old was Adolf Hitler when he died?",
+                "answer": "56"}
         },
         {
             "category": "History",
-            "question": "Abolitionist John Brown raided the arsenal in which Virginia Town?",
-            "answer": "Harper's Ferry"
+            "roundTwo": {
+                "value": 500,
+                "question": "Abolitionist John Brown raided the arsenal in which Virginia Town?",
+                "answer": "Harper's Ferry"}
         },
         {
             "category": "General",
-            "question": "Which company did Valve cooperate with in the creation of the Vive?",
-            "answer": "HTC"
+            "roundOne": {
+                "value": 100,
+                "question": "Which company did Valve cooperate with in the creation of the Vive?",
+                "answer": "HTC"}
         },
         {
             "category": "General",
-            "question": "What alcoholic drink is made from molasses?",
-            "answer": "Rum"
+            "roundOne": {
+                "value": 200,
+                "question": "What alcoholic drink is made from molasses?",
+                "answer": "Rum"}
         },
         {
             "category": "General",
-            "question": "What is the French word for &quot;hat&quot;?",
-            "answer": "Chapeau"
+            "roundOne": {
+                "value": 300,
+                "question": "What is the French word for &quot;hat&quot;?",
+                "answer": "Chapeau"}
         },
         {
             "category": "General",
-            "question": "Who is depicted on the US hundred dollar bill?",
-            "answer": "Benjamin Franklin"
+            "roundOne": {
+                "value": 400,
+                "question": "Who is depicted on the US hundred dollar bill?",
+                "answer": "Benjamin Franklin"}
         },
         {
             "category": "General",
-            "question": "What do the letters in the GMT time zone stand for?",
-            "answer": "Greenwich Mean Time"
+            "roundOne": {
+                "value": 500,
+                "question": "What do the letters in the GMT time zone stand for?",
+                "answer": "Greenwich Mean Time"}
         },
         {
             "category": "General",
+            "roundTwo": {
+                "value": 100,
             "question": "How tall is the Burj Khalifa?",
-            "answer": "2,722 ft"
+            "answer": "2,722 ft"}
         },
         {
             "category": "General",
-            "question": "When someone is cowardly, they are said to have what color belly?",
-            "answer": "Yellow"
+            "roundTwo": {
+                "value": 200,
+                "question": "When someone is cowardly, they are said to have what color belly?",
+                "answer": "Yellow"}
         },
         {
             "category": "General",
-            "question": "What is the name of NASA's most famous space telescope?",
-            "answer": "Hubble Space Telescope"
+            "roundTwo": {
+                "value": 300,
+                "question": "What is the name of NASA's most famous space telescope?",
+                "answer": "Hubble Space Telescope"}
         },
         {
             "category": "General",
-            "question": "Who is the youngest person to recieve a Nobel Prize?",
-            "answer": "Malala Yousafzai"
+            "roundTwo": {
+                "value": 400,
+                "question": "Who is the youngest person to recieve a Nobel Prize?",
+                "answer": "Malala Yousafzai"}
         },
         {
             "category": "General",
-            "question": "What is the famous Papa John's last name?",
-            "answer": "Schnatter"
+            "roundTwo": {
+                "value": 500,
+                "question": "What is the famous Papa John's last name?",
+                "answer": "Schnatter"}
         },
         {
             "category": "Final",
-            "question": "What name was the bootcamp formerly known as?",
-            "answer": "Burlington Code Academy"
+            "finalJeopardy": {  
+                "value": "", 
+                "question": "What name was the bootcamp formerly known as?",
+                "answer": "Burlington Code Academy"}
         }
     ]
-
-    module.exports = placeholderQuestions
+*/
+    export default placeholderQuestions
