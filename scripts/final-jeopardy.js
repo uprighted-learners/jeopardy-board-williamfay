@@ -70,3 +70,4 @@ function handleWagers() {
 function handleAnswers() {
     
 }
+

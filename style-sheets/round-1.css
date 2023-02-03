@@ -19,7 +19,7 @@ h1 {
     align-items: center;
     display: grid;
     grid-template-columns: repeat(6, 150px);
-    grid-auto-rows: minmax(100px, auto);
+    grid-auto-rows: minmax(100px, auto-fit);
     justify-content: space-between;
     align-items: center;
 

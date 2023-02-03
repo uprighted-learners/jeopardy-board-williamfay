@@ -5,7 +5,7 @@ const submit = document.getElementById("respond");
 submit.disabled = true;
 let playerTurn = 1;
 let currentTurn = playerTurn;
-let currentCategory = ""
+let currentCategory = "";
 let score = 0;
 //Nav
 function runNav () {
