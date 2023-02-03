@@ -7,16 +7,18 @@
     list-style: none;
     text-align: center;
     padding: 0%;
+    
 }
 
 h1 {
-    text-align: center;;
+    text-align: center;
+    color: white;
 }
 
 #jeopardy-grid {
     align-items: center;
     display: grid;
-    grid-template-columns: repeat(6, 100px);
+    grid-template-columns: repeat(6, 150px);
     grid-auto-rows: minmax(100px, auto);
     justify-content: space-between;
     align-items: center;
@@ -29,8 +31,9 @@ body {
 }
 
 .topic, .amount {
-    border: solid 1px  blue;
-    background-color: rgb(226, 226, 226);
+    border: solid 1px  black;
+    border-radius: 8px;
+    background-color: rgba(226, 226, 226, 0.736);
     height: 100px;
     text-align: center;
     align-items: center;
@@ -46,5 +49,23 @@ body {
 }
 
 #submit {
-    padding-top: 20px;
+    padding: 20px;
+    margin: 20px 0px 20px 0px;
+}
+
+.score {
+    padding: 0px 200px 0px 200px;
+}
+
+html {
+    background-image: url("../assets/benjamin-voros-phIFdC6lA4E-unsplash.jpg");
+    min-height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.score, #submit, .nav-bar {
+    background-color: rgba(226, 226, 226, 0.736);
+    border-radius: 8px;
 }

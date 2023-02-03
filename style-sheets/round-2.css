@@ -16,7 +16,7 @@ h1 {
 #jeopardy-grid {
     align-items: center;
     display: grid;
-    grid-template-columns: repeat(6, 100px);
+    grid-template-columns: repeat(6, 150px);
     grid-auto-rows: minmax(100px, auto);
     justify-content: space-between;
     align-items: center;

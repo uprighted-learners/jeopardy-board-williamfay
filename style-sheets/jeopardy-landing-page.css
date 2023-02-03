@@ -1,10 +1,11 @@
 .welcome-message, footer {
-    color: rgb(0, 0, 0);
+    color: white;
 }
 
 main {
     display: grid;
     justify-content: center;
+    
 }
 .play {
     justify-content: center;
@@ -13,11 +14,31 @@ main {
 body {
     display: grid;
     justify-content: center;
+    padding-top: 200px;
+    padding-bottom: 200px;
+}
+
+.content {
+    background-color: rgba(41, 45, 49, 0.63);
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
 }
 
 header, footer {
     display: grid;
     justify-content: center;
+    
 }
 
-
+html {
+    background-image: url("../assets/benjamin-voros-phIFdC6lA4E-unsplash.jpg");
+    min-height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
