@@ -45,39 +45,41 @@ function deactivateButton() {
 }
   //Handle Questions
 let divs = document.getElementsByClassName("amount");
+let points = 0;
 
+console.log(divs)
 for (const div of divs) {
-    div.addEventListener("click", event => {
-            let questionCategory = event.target.id.split(' ')[0];
-            let questionValue = event.target.id.split(' ')[1];
-            div.textContent = placeholderQuestions[0].roundOne[questionCategory][questionValue].question;
-            activateButton();
-            })
-        };
-        
+  div.addEventListener("click", event => {
+          let questionCategory = event.target.id.split(' ')[0];
+          let questionValue = event.target.id.split(' ')[1];
+          div.textContent = placeholderQuestions[0].roundOne[questionCategory][questionValue].question;
+          points = placeholderQuestions[0].roundOne[questionCategory][questionValue].value;
+          activateButton();
+        })
+      };
+
+console.log(points)       
+  //Handle Submit
 submit.addEventListener("click", event => {
     deactivateButton();
     checkAnswer();
     })
-  //Handle Submit
-  /*
-submit.addEventListener("click", event => {
-        console.log(val);
-        deactivateButton();
-        checkAnswer();
-    });*/
+  //Handle CheckAnswer
 function checkAnswer() {
   for (const div of divs) {
-    div.addEventListener("click", event => {
-      let questionCategory = event.target.id.split(' ')[0];
-      let questionValue = event.target.id.split(' ')[1];
+    let points = div.innerHTML
+    console.log(points)
+  }
+
+
+
       let response = document.getElementById("response-input").value.toLowerCase();
       let answer = placeholderQuestions[0].roundOne[questionCategory][questionValue].answer;
       console.log(response);
       console.log(answer);
       if (playerTurn) {
           if (response === answer.toLowerCase()) {
-          scoreOne = scoreOne + placeholderQuestions[0].roundOne[questionCategory][questionValue].value;
+          scoreOne = scoreOne + points;
           console.log(scoreOne)
           //change the text content for the scores to new score
           playerOne.textContent = `Player 1: ${scoreOne}`
@@ -100,9 +102,8 @@ function checkAnswer() {
             turn.textContent = `Turn: Player 1`
           }
         }
-      })
     }
-  }
+
 
   //Handle Pass
 
