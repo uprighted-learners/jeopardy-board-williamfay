@@ -5,7 +5,7 @@
                     "oneHundred": {
                         "value": 100,
                         "question": "The human heart has how many chambers?",
-                        "answer": "4",
+                        "answer": "Four",
                     },
                     "twoHundred": {
                         "value": 200,
@@ -113,7 +113,7 @@
                     "oneHundred": {
                         "value": 100,
                         "question": "How many manned moon landings have there been?",
-                        "answer": "6"
+                        "answer": "Six"
                     },
                     "twoHundred": {
                         "value": 200,
